@@ -1,0 +1,7 @@
+test,implementation,expected_unique_count,observed_unique_count,observation
+same_reference_twice,before_and_after,1,1,same object is recognized
+two_equal_registration_numbers,before,1,2,missing hashCode permits duplicate bucket entries
+two_equal_registration_numbers,after,1,1,Objects.hash(regNo) restores the equals/hashCode contract
+three_student_attendance,before,2,3,duplicate registration number remains in the set
+three_student_attendance,after,2,2,duplicate registration number is rejected
+mutated_hashed_field,after,not_applicable,contains=false,do not mutate a key while stored
